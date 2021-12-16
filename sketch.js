@@ -29,6 +29,7 @@ porquinho2 = new porquinhosmaluquerus(820,280);
     box4 = new Box(740,280,70,70);
     box5 = new Box(820,240,70,70);
     uzecaiunochao=new Zezinfidoze(600,390,1200,20);
+    chao2=new Zezinfidoze(6,390,300,500)
     cepodemadeira1=new craftingtable(820,300,300,PI/2);
     cepodemadeira2=new craftingtable(820,260,230,PI/2);
 }
@@ -46,6 +47,7 @@ function draw(){
     porquinho1.display();
     porquinho2.display();
     uzecaiunochao.display();
+    chao2.display();
    cepodemadeira1.display();
    cepodemadeira2.display();
 }
