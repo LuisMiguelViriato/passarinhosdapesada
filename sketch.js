@@ -32,12 +32,14 @@ porquinho2 = new porquinhosmaluquerus(820,280);
     chao2=new Zezinfidoze(6,390,300,500)
     cepodemadeira1=new craftingtable(820,300,300,PI/2);
     cepodemadeira2=new craftingtable(820,260,230,PI/2);
+    restri1=new liguinhaforte(bird1.body,chao2.body);
 }
 
 
 function draw(){
     background(Fundo);
     Engine.update(engine);
+    restri1.display();
     bird1.display();
     box1.display();
     box2.display();

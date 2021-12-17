@@ -3,7 +3,7 @@ class bemtivi {
     var options = {
         'restitution':0.8,
         'friction':3,
-        'density':0.1
+        'density':1
     }
     this.body = Bodies.rectangle(x, y, width, height, options);
     this.width = width;
