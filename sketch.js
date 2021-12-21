@@ -32,7 +32,8 @@ porquinho2 = new porquinhosmaluquerus(820,280);
     chao2=new Zezinfidoze(6,390,300,500)
     cepodemadeira1=new craftingtable(820,300,300,PI/2);
     cepodemadeira2=new craftingtable(820,260,230,PI/2);
-    restri1=new liguinhaforte(bird1.body,chao2.body);
+    restri1=new liguinhaforte(bird1.body,{x:200,y:100
+    });
 }
 
 
@@ -53,3 +54,21 @@ function draw(){
    cepodemadeira1.display();
    cepodemadeira2.display();
 }
+
+function mouseDragged(){
+
+Matter.Body.setPosition(bird1.body,{x:mouseX,y:mouseY})
+
+
+
+
+}
+
+function mouseReleased(){
+    restri1.fly()
+
+}
+
+
+
+
