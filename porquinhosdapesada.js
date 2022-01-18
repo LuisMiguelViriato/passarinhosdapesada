@@ -12,6 +12,11 @@ class porquinhosmaluquerus {
       World.add(world, this.body);
     }
     display(){
+      if(this.body.speed>3){
+        World.remove(world,this.body) 
+      }else{
+        
+      
       var pos =this.body.position;
       var angle = this.body.angle;
       push()
@@ -21,6 +26,7 @@ class porquinhosmaluquerus {
       fill("green");
       image(this.image,0, 0, this.width, this.height);
       pop();
+      }
     }
   };
   //box = azium
