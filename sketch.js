@@ -9,10 +9,10 @@ var uzecaiunochao;
 var porquinho1,porquinho2;
 var cepodemadeira1,cepodemadeira2;
 var bird1;
-var Fundo
+var bg ="bg.png",bgimage
 function preload(){
-Fundo = loadImage("bg.png")
-
+//Fundo= loadImage("bg.png")
+time()
 
 
 }
@@ -38,7 +38,7 @@ porquinho2 = new porquinhosmaluquerus(820,280);
 
 
 function draw(){
-    background(Fundo);
+    if(bgimage){background(bgimage);}
     Engine.update(engine);
     restri1.display();
     bird1.display();
@@ -54,7 +54,17 @@ function draw(){
    cepodemadeira1.display();
    cepodemadeira2.display();
 }
-
+async function time(){
+var resposta = await fetch("http://worldtimeapi.org/api/timezone/America/Sao_Paulo")
+var aknator = await resposta.json()
+var sunmoon = aknator.datetime.slice(11,13)
+if(sunmoon>=06 && sunmoon<=18){
+    bg="bg.png"
+}else{
+    bg="bg2 (1).jpg"
+}
+bgimage=loadImage(bg)
+}
 function mouseDragged(){
 
 Matter.Body.setPosition(bird1.body,{x:mouseX,y:mouseY})
